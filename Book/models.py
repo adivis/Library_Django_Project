@@ -9,7 +9,7 @@ class Book (models.Model):
 	release_date = models.DateField()
 
 	#delete things associate with it but not account
-	account_user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+	account_user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE, default="")
 
 	def __str__(self):
 		return self.title
